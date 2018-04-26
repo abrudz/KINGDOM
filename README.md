@@ -20,7 +20,7 @@
 ```
 The workspace `6 KINGDOM` from [MVT for APL Version 2.00](http://wotho.ethz.ch/mvt4apl-2.00/) ported to [Dyalog APL](https://dyalog.com) with the following minimal changes to make the code run on a modern system:
 
-1. The `NUMBER;'TEXT` syntax for printing multiple arrays on the same line has been replaced by `(⍕NUMBER),'TEXT'`
+1. The `NUMBER;'TEXT'` syntax for printing multiple arrays on the same line has been replaced by `(⍕NUMBER),'TEXT'`
 
 2. `FORGET←⌶20` has been replaced by `FORGET←⎕AI[3]`
 
