@@ -30,7 +30,7 @@ The workspace `6 KINGDOM` from [MVT for APL Version 2.00](http://wotho.ethz.ch/m
 
 Enter `(0⎕FIX'file://path/KINGDOM.dyalog').START` .
 
-Further instructions will be given by the game.
+Further instructions will be given by the game. If you want to answer *no* to a text prompt, make sure to do so in UPPERCASE as the code assumes that lowercase letters don't exist.
 
 ## How to stop
 
