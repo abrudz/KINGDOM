@@ -18,7 +18,7 @@
 *              GAIL LIFT AND GEORGE HELFFRICH      *
 ****************************************************
 ```
-The workspace `6 KINGDOM` from [MVT for APL Version 2.00](http://wotho.ethz.ch/mvt4apl-2.00/) ported to [Dyalog APL](https://dyalog.com) with the following minimal changes to make the code run on a modern system:
+The workspace `6 KINGDOM` from [MVT for APL Version 2.00](http://wotho.ethz.ch/mvt4apl-2.00/) ported to [Dyalog APL Unicode](https://dyalog.com) with the following minimal changes to make the code run on a modern system:
 
 1. The `NUMBER;'TEXT'` syntax for printing multiple arrays on the same line has been replaced by `(⍕NUMBER),'TEXT'`
 
