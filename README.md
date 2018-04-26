@@ -30,7 +30,7 @@ The workspace `6 KINGDOM` from [MVT for APL Version 2.00](http://wotho.ethz.ch/m
 
 Enter `(0⎕FIX'file://path/KINGDOM.dyalog').START` .
 
-Furher instructions will be given by the game.
+Further instructions will be given by the game.
 
 ## How to stop
 
