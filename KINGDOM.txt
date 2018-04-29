@@ -1,4 +1,4 @@
-﻿:Namespace KINGDOM
+﻿ 
     Ⓔ←1
 
     ∇ CUMV←CS V;N
@@ -6,8 +6,8 @@
     ∇
 
     ∇ Q←DATA
-      'YOU HAVE ',(⍕G),' BUSHELS OF GRAIN AVAILABLE AT THIS POINT, AND    '
-      (⍕L+R),' ACRES AVAILABLE FOR PLANTING.'
+      'YOU HAVE ';G;' BUSHELS OF GRAIN AVAILABLE AT THIS POINT, AND    '
+      L+R;' ACRES AVAILABLE FOR PLANTING.'
       'LAND COSTS 20 BUSHELS PER ACRE TO BUY OR SELL, AND'
       'CAN BE RENTED FOR 4 BUSHELS PER ACRE PER YEAR.'
       'EACH ACRE PLANTED REQUIRES 1 BUSHEL OF GRAIN,'
@@ -130,12 +130,12 @@
     ∇
 
     ∇ SEED;FORGET
-      FORGET←⎕AI[3]
+      FORGET←⌶20
       FORGET←SETLINK 1+2×FORGET÷2
     ∇
 
     ∇ R←SETLINK X
-      R←⎕RL←X,1
+      R←6⌶1,X
     ∇
 
     ∇ START
@@ -159,7 +159,7 @@
       I←D[Y;13]
       R←0
       ' '
-      '*****YEAR=',(⍕Y),' GRAIN=',(⍕G),' PEASANTS=',(⍕P),' LAND=',(⍕L),'*****'
+      '*****YEAR=';Y;' GRAIN=';G;' PEASANTS=';P;' LAND=';L;'*****'
       →(S>2)/S9A
       'PEASANT SATISFACTION IS DANGEROUSLY LOW.'
       →S9C
@@ -251,22 +251,22 @@
       →S20B
      S20A:→(YIELD=0)/S20B
       'THIS WAS A GOOD CROP YEAR.'
-     S20B:'THE YIELD WAS ',(⍕YIELD),' BUSHELS.'
+     S20B:'THE YIELD WAS ';YIELD;' BUSHELS.'
       G←G+YIELD
       ATE←⌊G⌊(G×0.02×?6)+YIELD×0.02×?6
       →(ATE≤G÷5)/S21
-      'BUT THE RATS ATE ',(⍕ATE),' BUSHELS.'
+      'BUT THE RATS ATE ';ATE;' BUSHELS.'
      S21:G←G-ATE
       ⍝CALCULATE PEASANT PILFERAGE
       PILFER←0
       →(3≤GP÷P)/S22
       →(M≥P÷10)/S22
       PILFER←⌊G⌊(1-M÷P÷10)×P×(3-GP÷P)
-      'AND THE PEASANTS PILFERED ',(⍕PILFER),' BUSHELS.'
+      'AND THE PEASANTS PILFERED ';PILFER;' BUSHELS.'
       ⍝CALCULATE TOTAL LOSSES
      S22:D[Y;10]←LOSSES←ATE+PILFER
       →(LOSSES<G÷4)/S22X
-      'TOTAL GRAIN LOSSES (RATS AND PEASANTS) ',(⍕LOSSES),' BUSHELS.'
+      'TOTAL GRAIN LOSSES (RATS AND PEASANTS) ';LOSSES;' BUSHELS.'
       ⍝OUTPUT NEW RECORD
      S22X:D←((Y+1),13)⍴(,D),(Y+1),G,P,L,9⍴0
       ⍝CALCULATE GRAIN TO PEASANT EFFECT ON PEASANT SATISFACTION
@@ -338,4 +338,3 @@
       ,(8 1)IT D[I;⍳11]
       →5
     ∇
-:EndNamespace
